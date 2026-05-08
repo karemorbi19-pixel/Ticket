@@ -4,6 +4,9 @@ builder = "NIXPACKS"
 [deploy]
 startCommand = ""
 healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
 
 [[redirects]]
 from = "/*"
@@ -12,3 +15,13 @@ status = 200
 
 [env]
 NODE_ENV = "production"
+PORT = "8080"
+
+[nixpacks]
+build-image = "ubuntu:22.04"
+
+[nixpacks.build]
+cmd = "echo 'Static site - no build needed'"
+
+[nixpacks.start]
+cmd = "python3 -m http.server 8080 --bind 0.0.0.0"
