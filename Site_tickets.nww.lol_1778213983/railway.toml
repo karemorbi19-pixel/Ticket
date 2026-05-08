@@ -1,0 +1,14 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = ""
+healthcheckPath = "/"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[env]
+NODE_ENV = "production"

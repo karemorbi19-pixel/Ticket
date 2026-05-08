@@ -1,0 +1,16 @@
+{
+  "name": "nitwit-ticketing-system",
+  "version": "1.0.0",
+  "description": "NitWit Support Ticketing System - Static Site",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - use any static server'"
+  },
+  "keywords": ["tickets", "support", "discord", "nitwit", "static"],
+  "author": "NitWit",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
